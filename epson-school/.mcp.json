@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "epson-print": {
+      "type": "http",
+      "url": "https://epson-mcp-server.vercel.app/api/mcp"
+    }
+  }
+}

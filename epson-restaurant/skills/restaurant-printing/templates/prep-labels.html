@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="epson-paper" content="ps_a4 ps_letter">
+<meta name="epson-pages" content="1">
+<title>Prep labels</title>
+<!-- Kitchen prep / date labels, 24 per sheet (3 x 8). Print on full-sheet sticker paper and cut, or on plain
+     paper and tape to containers. Each .label: item, prepped date, use-by date, initials, storage.
+     Pre-fill item names and dates when the user gives them; leave fields blank (the line stays) for handwriting.
+     Colour bar by day of the week (food-safety "day dots") is optional: Mon blue, Tue yellow, Wed red, Thu brown,
+     Fri green, Sat orange, Sun black. Use the class .mon … .sun on the label. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=block">
+<style>
+  @page { margin: 8mm; }
+  :root { --ink: #1d1a17; --muted: #6b635a; --cut: #c9c2ba; }
+  body { font-family: Inter, Helvetica, Arial, sans-serif; color: var(--ink); }
+  .sheet { height: 100vh; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(8, 1fr); }
+  .label { border: 0.5pt dashed var(--cut); display: flex; overflow: hidden; }
+  .bar { width: 4mm; flex: none; }
+  .mon .bar { background: #2f6db5; } .tue .bar { background: #f0c419; } .wed .bar { background: #d33c33; }
+  .thu .bar { background: #7a4e2d; } .fri .bar { background: #3c9a4a; } .sat .bar { background: #ee8a1d; } .sun .bar { background: #222; }
+  .body { flex: 1; padding: 2mm 3mm; display: flex; flex-direction: column; justify-content: space-between; font-size: 7.5pt; }
+  .item { font-weight: 700; font-size: 10.5pt; border-bottom: 0.6pt solid var(--ink); min-height: 5mm; line-height: 1.2; }
+  .row { display: flex; gap: 2mm; }
+  .field { flex: 1; display: flex; gap: 1mm; align-items: baseline; }
+  .field b { color: var(--muted); font-weight: 600; font-size: 6.5pt; text-transform: uppercase; letter-spacing: 0.4pt; white-space: nowrap; }
+  .field span { flex: 1; border-bottom: 0.5pt solid #9a9189; min-height: 3.6mm; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="sheet">
+  <!-- Pre-filled examples -->
+  <div class="label fri"><div class="bar"></div><div class="body"><div class="item">Tomato &amp; pepper sauce</div>
+    <div class="row"><div class="field"><b>Prep</b><span>15/11</span></div><div class="field"><b>Use by</b><span>18/11</span></div></div>
+    <div class="row"><div class="field"><b>By</b><span>JM</span></div><div class="field"><b>Store</b><span>Fridge</span></div></div></div></div>
+  <div class="label fri"><div class="bar"></div><div class="body"><div class="item">Pancake batter</div>
+    <div class="row"><div class="field"><b>Prep</b><span>15/11</span></div><div class="field"><b>Use by</b><span>16/11</span></div></div>
+    <div class="row"><div class="field"><b>By</b><span>JM</span></div><div class="field"><b>Store</b><span>Fridge</span></div></div></div></div>
+  <div class="label fri"><div class="bar"></div><div class="body"><div class="item">Pickled red onion</div>
+    <div class="row"><div class="field"><b>Prep</b><span>15/11</span></div><div class="field"><b>Use by</b><span>22/11</span></div></div>
+    <div class="row"><div class="field"><b>By</b><span>AK</span></div><div class="field"><b>Store</b><span>Fridge</span></div></div></div></div>
+  <!-- Blank labels for handwriting: repeat to fill the sheet (24 in total) -->
+  <div class="label"><div class="bar"></div><div class="body"><div class="item"></div><div class="row"><div class="field"><b>Prep</b><span></span></div><div class="field"><b>Use by</b><span></span></div></div><div class="row"><div class="field"><b>By</b><span></span></div><div class="field"><b>Store</b><span></span></div></div></div></div>
+  <div class="label"><div class="bar"></div><div class="body"><div class="item"></div><div class="row"><div class="field"><b>Prep</b><span></span></div><div class="field"><b>Use by</b><span></span></div></div><div class="row"><div class="field"><b>By</b><span></span></div><div class="field"><b>Store</b><span></span></div></div></div></div>
+  <div class="label"><div class="bar"></div><div class="body"><div class="item"></div><div class="row"><div class="field"><b>Prep</b><span></span></div><div class="field"><b>Use by</b><span></span></div></div><div class="row"><div class="field"><b>By</b><span></span></div><div class="field"><b>Store</b><span></span></div></div></div></div>
+  <div class="label"><div class="bar"></div><div class="body"><div class="item"></div><div class="row"><div class="field"><b>Prep</b><span></span></div><div class="field"><b>Use by</b><span></span></div></div><div class="row"><div class="field"><b>By</b><span></span></div><div class="field"><b>Store</b><span></span></div></div></div></div>
+  <div class="label"><div class="bar"></div><div class="body"><div class="item"></div><div class="row"><div class="field"><b>Prep</b><span></span></div><div class="field"><b>Use by</b><span></span></div></div><div class="row"><div class="field"><b>By</b><span></span></div><div class="field"><b>Store</b><span></span></div></div></div></div>
+  <div class="label"><div class="bar"></div><div class="body"><div class="item"></div><div class="row"><div class="field"><b>Prep</b><span></span></div><div class="field"><b>Use by</b><span></span></div></div><div class="row"><div class="field"><b>By</b><span></span></div><div class="field"><b>Store</b><span></span></div></div></div></div>
+  <div class="label"><div class="bar"></div><div class="body"><div class="item"></div><div class="row"><div class="field"><b>Prep</b><span></span></div><div class="field"><b>Use by</b><span></span></div></div><div class="row"><div class="field"><b>By</b><span></span></div><div class="field"><b>Store</b><span></span></div></div></div></div>
+  <div class="label"><div class="bar"></div><div class="body"><div class="item"></div><div class="row"><div class="field"><b>Prep</b><span></span></div><div class="field"><b>Use by</b><span></span></div></div><div class="row"><div class="field"><b>By</b><span></span></div><div class="field"><b>Store</b><span></span></div></div></div></div>
+  <div class="label"><div class="bar"></div><div class="body"><div class="item"></div><div class="row"><div class="field"><b>Prep</b><span></span></div><div class="field"><b>Use by</b><span></span></div></div><div class="row"><div class="field"><b>By</b><span></span></div><div class="field"><b>Store</b><span></span></div></div></div></div>
+  <div class="label"><div class="bar"></div><div class="body"><div class="item"></div><div class="row"><div class="field"><b>Prep</b><span></span></div><div class="field"><b>Use by</b><span></span></div></div><div class="row"><div class="field"><b>By</b><span></span></div><div class="field"><b>Store</b><span></span></div></div></div></div>
+  <div class="label"><div class="bar"></div><div class="body"><div class="item"></div><div class="row"><div class="field"><b>Prep</b><span></span></div><div class="field"><b>Use by</b><span></span></div></div><div class="row"><div class="field"><b>By</b><span></span></div><div class="field"><b>Store</b><span></span></div></div></div></div>
+  <div class="label"><div class="bar"></div><div class="body"><div class="item"></div><div class="row"><div class="field"><b>Prep</b><span></span></div><div class="field"><b>Use by</b><span></span></div></div><div class="row"><div class="field"><b>By</b><span></span></div><div class="field"><b>Store</b><span></span></div></div></div></div>
+  <div class="label"><div class="bar"></div><div class="body"><div class="item"></div><div class="row"><div class="field"><b>Prep</b><span></span></div><div class="field"><b>Use by</b><span></span></div></div><div class="row"><div class="field"><b>By</b><span></span></div><div class="field"><b>Store</b><span></span></div></div></div></div>
+  <div class="label"><div class="bar"></div><div class="body"><div class="item"></div><div class="row"><div class="field"><b>Prep</b><span></span></div><div class="field"><b>Use by</b><span></span></div></div><div class="row"><div class="field"><b>By</b><span></span></div><div class="field"><b>Store</b><span></span></div></div></div></div>
+  <div class="label"><div class="bar"></div><div class="body"><div class="item"></div><div class="row"><div class="field"><b>Prep</b><span></span></div><div class="field"><b>Use by</b><span></span></div></div><div class="row"><div class="field"><b>By</b><span></span></div><div class="field"><b>Store</b><span></span></div></div></div></div>
+  <div class="label"><div class="bar"></div><div class="body"><div class="item"></div><div class="row"><div class="field"><b>Prep</b><span></span></div><div class="field"><b>Use by</b><span></span></div></div><div class="row"><div class="field"><b>By</b><span></span></div><div class="field"><b>Store</b><span></span></div></div></div></div>
+  <div class="label"><div class="bar"></div><div class="body"><div class="item"></div><div class="row"><div class="field"><b>Prep</b><span></span></div><div class="field"><b>Use by</b><span></span></div></div><div class="row"><div class="field"><b>By</b><span></span></div><div class="field"><b>Store</b><span></span></div></div></div></div>
+  <div class="label"><div class="bar"></div><div class="body"><div class="item"></div><div class="row"><div class="field"><b>Prep</b><span></span></div><div class="field"><b>Use by</b><span></span></div></div><div class="row"><div class="field"><b>By</b><span></span></div><div class="field"><b>Store</b><span></span></div></div></div></div>
+  <div class="label"><div class="bar"></div><div class="body"><div class="item"></div><div class="row"><div class="field"><b>Prep</b><span></span></div><div class="field"><b>Use by</b><span></span></div></div><div class="row"><div class="field"><b>By</b><span></span></div><div class="field"><b>Store</b><span></span></div></div></div></div>
+  <div class="label"><div class="bar"></div><div class="body"><div class="item"></div><div class="row"><div class="field"><b>Prep</b><span></span></div><div class="field"><b>Use by</b><span></span></div></div><div class="row"><div class="field"><b>By</b><span></span></div><div class="field"><b>Store</b><span></span></div></div></div></div>
+  <div class="label"><div class="bar"></div><div class="body"><div class="item"></div><div class="row"><div class="field"><b>Prep</b><span></span></div><div class="field"><b>Use by</b><span></span></div></div><div class="row"><div class="field"><b>By</b><span></span></div><div class="field"><b>Store</b><span></span></div></div></div></div>
+</div>
+</body>
+</html>

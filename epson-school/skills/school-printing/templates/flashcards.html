@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="epson-paper" content="ps_a4 ps_letter">
+<meta name="epson-pages" content="2">
+<title>Flashcards</title>
+<!-- Double-sided flashcards, 8 per sheet (2 x 4). Page 1 = fronts (question/term), page 2 = backs (answer).
+     The backs are mirrored left-to-right so that after flipping the sheet over its LONG edge, each answer lands
+     behind its question. Card order on page 2 per row is therefore: [2, 1], [4, 3], [6, 5], [8, 7].
+     For more than 8 cards add another front .sheet + back .sheet pair (2 pages per 8 cards).
+     For single-sided cards (fold or cut apart), drop the backs sheet and put the answer in .hint on the front. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&display=block">
+<style>
+  @page { margin: 8mm; }
+  :root { --ink: #1b1f24; --muted: #5d6670; --accent: #2b6cb0; --soft: #edf3fa; --cut: #c3cad1; }
+  body { font-family: Lexend, Helvetica, Arial, sans-serif; color: var(--ink); }
+  .sheet { height: 100vh; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(4, 1fr); }
+  .sheet + .sheet { page-break-before: always; }
+  .card { border: 0.5pt dashed var(--cut); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 6mm 8mm; position: relative; }
+  .card .set { position: absolute; top: 3.5mm; left: 5mm; font-size: 7pt; letter-spacing: 1.2pt; text-transform: uppercase; color: var(--accent); font-weight: 500; }
+  .card .num { position: absolute; top: 3.5mm; right: 5mm; font-size: 7pt; color: var(--muted); }
+  .front .term { font-size: 24pt; font-weight: 700; line-height: 1.15; }
+  .front .hint { font-size: 9pt; color: var(--muted); margin-top: 2.5mm; }
+  .back { background: var(--soft); }
+  .back .answer { font-size: 13pt; font-weight: 500; line-height: 1.35; }
+  .back .example { font-size: 9.5pt; color: var(--muted); margin-top: 2.5mm; font-style: italic; }
+</style>
+</head>
+<body>
+<!-- FRONTS: cards 1–8, left-to-right, top-to-bottom -->
+<div class="sheet">
+  <div class="card front"><span class="set">Science &middot; Plants</span><span class="num">1</span><div class="term">Photosynthesis</div><div class="hint">What does it mean?</div></div>
+  <div class="card front"><span class="set">Science &middot; Plants</span><span class="num">2</span><div class="term">Chlorophyll</div><div class="hint">What does it do?</div></div>
+  <div class="card front"><span class="set">Science &middot; Plants</span><span class="num">3</span><div class="term">Pollination</div></div>
+  <div class="card front"><span class="set">Science &middot; Plants</span><span class="num">4</span><div class="term">Germination</div></div>
+  <div class="card front"><span class="set">Science &middot; Plants</span><span class="num">5</span><div class="term">Roots</div><div class="hint">Two jobs</div></div>
+  <div class="card front"><span class="set">Science &middot; Plants</span><span class="num">6</span><div class="term">Stem</div></div>
+  <div class="card front"><span class="set">Science &middot; Plants</span><span class="num">7</span><div class="term">Seed dispersal</div><div class="hint">Name two ways</div></div>
+  <div class="card front"><span class="set">Science &middot; Plants</span><span class="num">8</span><div class="term">Nutrients</div></div>
+</div>
+<!-- BACKS: mirrored per row for long-edge flip: 2,1 / 4,3 / 6,5 / 8,7 -->
+<div class="sheet">
+  <div class="card back"><span class="num">2</span><div class="answer">The green substance in leaves that captures light energy.</div></div>
+  <div class="card back"><span class="num">1</span><div class="answer">How plants make their own food from light, water and carbon dioxide.</div><div class="example">It releases oxygen.</div></div>
+  <div class="card back"><span class="num">4</span><div class="answer">When a seed starts to grow into a new plant.</div><div class="example">It needs water and warmth.</div></div>
+  <div class="card back"><span class="num">3</span><div class="answer">Moving pollen from one flower to another so seeds can form.</div><div class="example">Bees and wind help.</div></div>
+  <div class="card back"><span class="num">6</span><div class="answer">Holds the plant up and carries water from the roots to the leaves.</div></div>
+  <div class="card back"><span class="num">5</span><div class="answer">Anchor the plant in the soil and take in water and nutrients.</div></div>
+  <div class="card back"><span class="num">8</span><div class="answer">Minerals from the soil that help a plant grow healthy.</div></div>
+  <div class="card back"><span class="num">7</span><div class="answer">Spreading seeds away from the parent plant.</div><div class="example">Wind, animals, water, bursting pods.</div></div>
+</div>
+</body>
+</html>

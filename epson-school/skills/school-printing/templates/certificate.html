@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="epson-paper" content="ps_a4 ps_letter">
+<meta name="epson-pages" content="1">
+<title>Certificate</title>
+<!-- Award certificate, portrait. For a whole class, repeat the .cert block once per student; each one prints
+     on its own page (page-break-after), and set expected pages to the number of students.
+     Change: award title, recipient name, reason, date, school and signatory. Accent colour: --accent. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Great+Vibes&family=Lexend:wght@400;600&display=block">
+<style>
+  @page { margin: 9mm; }
+  :root { --ink: #1f2430; --muted: #5f6573; --accent: #b08a2e; --accent-soft: #f7f0de; }
+  body { font-family: Lexend, Helvetica, Arial, sans-serif; color: var(--ink); }
+  .cert { height: 100vh; box-sizing: border-box; padding: 4mm; border: 3pt solid var(--accent); page-break-after: always; }
+  .cert:last-child { page-break-after: auto; }
+  .inner { height: 100%; box-sizing: border-box; border: 0.8pt solid var(--accent); padding: 16mm 14mm; display: flex; flex-direction: column; align-items: center; text-align: center; background: radial-gradient(ellipse at center, #fff 55%, var(--accent-soft) 100%); }
+  .school { font-size: 10pt; letter-spacing: 4pt; text-transform: uppercase; color: var(--muted); }
+  .seal { width: 26mm; height: 26mm; border-radius: 50%; border: 1.6pt solid var(--accent); display: flex; align-items: center; justify-content: center; margin: 10mm 0 8mm; color: var(--accent); font-family: "Cormorant Garamond", Georgia, serif; font-weight: 700; font-size: 22pt; outline: 0.6pt solid var(--accent); outline-offset: 1.6mm; }
+  .kind { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 700; font-size: 40pt; line-height: 1; letter-spacing: 1pt; }
+  .of { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: 20pt; color: var(--accent); margin-top: 2mm; }
+  .presented { margin-top: 16mm; font-size: 10pt; letter-spacing: 2pt; text-transform: uppercase; color: var(--muted); }
+  .name { font-family: "Great Vibes", "Brush Script MT", cursive; font-size: 56pt; line-height: 1.15; margin: 4mm 0 2mm; padding: 0 10mm 2mm; border-bottom: 0.8pt solid var(--accent); min-width: 60%; }
+  .reason { font-family: "Cormorant Garamond", Georgia, serif; font-size: 17pt; line-height: 1.35; max-width: 140mm; margin-top: 6mm; color: var(--ink); }
+  .signs { margin-top: auto; width: 100%; display: flex; justify-content: space-between; gap: 20mm; }
+  .sign { flex: 1; font-size: 9pt; color: var(--muted); }
+  .sign .line { border-top: 0.8pt solid var(--ink); padding-top: 2mm; margin-top: 14mm; }
+  .sign strong { display: block; color: var(--ink); font-weight: 600; font-size: 10pt; }
+</style>
+</head>
+<body>
+<div class="cert"><div class="inner">
+  <div class="school">Greenfield Primary School</div>
+  <div class="seal">★</div>
+  <div class="kind">Certificate</div>
+  <div class="of">of Achievement</div>
+  <div class="presented">Proudly presented to</div>
+  <div class="name">Aisha Rahman</div>
+  <div class="reason">for outstanding effort in Maths this term, and for always helping classmates with their fractions.</div>
+  <div class="signs">
+    <div class="sign"><div class="line"><strong>Mrs S. Patel</strong>Class Teacher</div></div>
+    <div class="sign"><div class="line"><strong>15 November 2026</strong>Date</div></div>
+  </div>
+</div></div>
+</body>
+</html>

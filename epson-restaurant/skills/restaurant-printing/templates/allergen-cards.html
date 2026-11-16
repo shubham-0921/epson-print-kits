@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="epson-paper" content="ps_a4 ps_letter">
+<meta name="epson-pages" content="1">
+<title>Allergen cards</title>
+<!-- Buffet / counter cards, 8 per sheet (2 x 4). Cut along the grey lines.
+     One .card per dish: name, diet badges, and the allergens it CONTAINS (bold) from the 14 regulated allergens:
+     celery, cereals containing gluten, crustaceans, eggs, fish, lupin, milk, molluscs, mustard, tree nuts, peanuts,
+     sesame, soya, sulphites. Only list what the user tells you; never guess allergens.
+     For more than 8 dishes, add another .sheet with page-break-before. Leave unused cards out (empty slots stay blank). -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;700&display=block">
+<style>
+  @page { margin: 8mm; }
+  :root { --ink: #1d1a17; --muted: #6b635a; --accent: #a4562a; --cut: #c9c2ba; }
+  body { font-family: Inter, Helvetica, Arial, sans-serif; color: var(--ink); }
+  .sheet { height: 100vh; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(4, 1fr); }
+  .sheet + .sheet { page-break-before: always; }
+  .card { border: 0.5pt dashed var(--cut); padding: 6mm 7mm; display: flex; flex-direction: column; overflow: hidden; }
+  .name { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: 17pt; line-height: 1.1; }
+  .badges { margin: 2.5mm 0 3mm; }
+  .badge { display: inline-block; font-size: 7.5pt; font-weight: 700; letter-spacing: 0.5pt; border-radius: 2mm; padding: 0.6mm 2mm; margin-right: 1.2mm; color: #fff; }
+  .v { background: #4d7a3a; } .vg { background: #2f6a4f; } .gf { background: #8a6d1d; } .df { background: #3d6487; }
+  .label { font-size: 7pt; text-transform: uppercase; letter-spacing: 1.2pt; color: var(--muted); margin-top: auto; }
+  .contains { font-size: 10pt; line-height: 1.35; margin-top: 1mm; }
+  .contains strong { font-weight: 700; }
+  .none { color: var(--muted); font-style: italic; }
+  .foot { font-size: 6.5pt; color: var(--muted); margin-top: 2mm; }
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="card"><div class="name">Wild Mushroom Risotto</div>
+    <div class="badges"><span class="badge v">VEGETARIAN</span><span class="badge gf">GLUTEN-FREE</span></div>
+    <div class="label">Contains</div><div class="contains"><strong>Milk</strong>, <strong>Celery</strong>, <strong>Sulphites</strong></div>
+    <div class="foot">The Copper Kettle &middot; ask staff for full ingredients</div></div>
+  <div class="card"><div class="name">Beer-Battered Cod</div>
+    <div class="badges"><span class="badge df">DAIRY-FREE</span></div>
+    <div class="label">Contains</div><div class="contains"><strong>Fish</strong>, <strong>Cereals containing gluten</strong> (wheat, barley), <strong>Eggs</strong>, <strong>Mustard</strong></div>
+    <div class="foot">The Copper Kettle &middot; ask staff for full ingredients</div></div>
+  <div class="card"><div class="name">Roast Squash Salad</div>
+    <div class="badges"><span class="badge vg">VEGAN</span><span class="badge gf">GLUTEN-FREE</span></div>
+    <div class="label">Contains</div><div class="contains"><strong>Sesame</strong>, <strong>Tree nuts</strong> (walnut)</div>
+    <div class="foot">The Copper Kettle &middot; ask staff for full ingredients</div></div>
+  <div class="card"><div class="name">Moroccan Lamb Tagine</div>
+    <div class="badges"><span class="badge df">DAIRY-FREE</span></div>
+    <div class="label">Contains</div><div class="contains"><strong>Tree nuts</strong> (almond), <strong>Cereals containing gluten</strong> (couscous), <strong>Celery</strong></div>
+    <div class="foot">The Copper Kettle &middot; ask staff for full ingredients</div></div>
+  <div class="card"><div class="name">Rosemary Fries</div>
+    <div class="badges"><span class="badge vg">VEGAN</span><span class="badge gf">GLUTEN-FREE</span></div>
+    <div class="label">Contains</div><div class="contains"><span class="none">None of the 14 allergens. Fried in a shared fryer.</span></div>
+    <div class="foot">The Copper Kettle &middot; ask staff for full ingredients</div></div>
+  <div class="card"><div class="name">Sticky Toffee Pudding</div>
+    <div class="badges"><span class="badge v">VEGETARIAN</span></div>
+    <div class="label">Contains</div><div class="contains"><strong>Milk</strong>, <strong>Eggs</strong>, <strong>Cereals containing gluten</strong> (wheat), <strong>Sulphites</strong> (dates)</div>
+    <div class="foot">The Copper Kettle &middot; ask staff for full ingredients</div></div>
+  <div class="card"><div class="name">Halloumi Fingers</div>
+    <div class="badges"><span class="badge v">VEGETARIAN</span></div>
+    <div class="label">Contains</div><div class="contains"><strong>Milk</strong>, <strong>Cereals containing gluten</strong> (wheat), <strong>Eggs</strong></div>
+    <div class="foot">The Copper Kettle &middot; ask staff for full ingredients</div></div>
+  <div class="card"><div class="name">Homemade Lemonade</div>
+    <div class="badges"><span class="badge vg">VEGAN</span><span class="badge gf">GLUTEN-FREE</span></div>
+    <div class="label">Contains</div><div class="contains"><span class="none">None of the 14 allergens.</span></div>
+    <div class="foot">The Copper Kettle &middot; ask staff for full ingredients</div></div>
+</div>
+</body>
+</html>

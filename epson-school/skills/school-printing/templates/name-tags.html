@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="epson-paper" content="ps_a4 ps_letter">
+<meta name="epson-pages" content="1">
+<title>Name tags</title>
+<!-- Name tags / desk labels, 8 per sheet (2 x 4). Cut along the dashed lines; slip into badge holders or tape to
+     desks. One .tag per student: first name (large), optional surname/role line, group colour (.c1 … .c6) and an
+     optional emoji or initial in .icon. For more than 8, add another .sheet (each sheet = 1 page).
+     Colours: c1 blue, c2 green, c3 orange, c4 purple, c5 red, c6 teal. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&display=block">
+<style>
+  @page { margin: 8mm; }
+  :root { --ink: #1b1f24; --muted: #5d6670; --cut: #c3cad1; }
+  body { font-family: Lexend, Helvetica, Arial, sans-serif; color: var(--ink); }
+  .sheet { height: 100vh; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(4, 1fr); }
+  .sheet + .sheet { page-break-before: always; }
+  .tag { --c: #2b6cb0; border: 0.5pt dashed var(--cut); display: flex; flex-direction: column; overflow: hidden; }
+  .c1 { --c: #2b6cb0; } .c2 { --c: #2f855a; } .c3 { --c: #dd6b20; } .c4 { --c: #6b46c1; } .c5 { --c: #c53030; } .c6 { --c: #2c7a7b; }
+  .band { background: var(--c); color: #fff; font-size: 8.5pt; font-weight: 600; letter-spacing: 1.6pt; text-transform: uppercase; padding: 2.2mm 6mm; display: flex; justify-content: space-between; }
+  .body { flex: 1; display: flex; align-items: center; gap: 5mm; padding: 0 7mm; }
+  .icon { width: 17mm; height: 17mm; flex: none; border-radius: 50%; border: 1.4pt solid var(--c); color: var(--c); display: flex; align-items: center; justify-content: center; font-size: 20pt; font-weight: 700; }
+  .first { font-size: 30pt; font-weight: 700; line-height: 1; }
+  .second { font-size: 11pt; color: var(--muted); margin-top: 2mm; }
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="tag c1"><div class="band"><span>Class 4P</span><span>Blue group</span></div><div class="body"><div class="icon">A</div><div><div class="first">Aisha</div><div class="second">Rahman</div></div></div></div>
+  <div class="tag c1"><div class="band"><span>Class 4P</span><span>Blue group</span></div><div class="body"><div class="icon">B</div><div><div class="first">Ben</div><div class="second">Carter</div></div></div></div>
+  <div class="tag c2"><div class="band"><span>Class 4P</span><span>Green group</span></div><div class="body"><div class="icon">C</div><div><div class="first">Chloe</div><div class="second">Davies</div></div></div></div>
+  <div class="tag c2"><div class="band"><span>Class 4P</span><span>Green group</span></div><div class="body"><div class="icon">D</div><div><div class="first">Daniel</div><div class="second">Okafor</div></div></div></div>
+  <div class="tag c3"><div class="band"><span>Class 4P</span><span>Orange group</span></div><div class="body"><div class="icon">E</div><div><div class="first">Ella</div><div class="second">Fitzgerald</div></div></div></div>
+  <div class="tag c3"><div class="band"><span>Class 4P</span><span>Orange group</span></div><div class="body"><div class="icon">F</div><div><div class="first">Farhan</div><div class="second">Ali</div></div></div></div>
+  <div class="tag c4"><div class="band"><span>Class 4P</span><span>Purple group</span></div><div class="body"><div class="icon">G</div><div><div class="first">Grace</div><div class="second">Liu</div></div></div></div>
+  <div class="tag c4"><div class="band"><span>Class 4P</span><span>Purple group</span></div><div class="body"><div class="icon">H</div><div><div class="first">Harry</div><div class="second">Jones</div></div></div></div>
+</div>
+</body>
+</html>

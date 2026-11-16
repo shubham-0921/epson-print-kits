@@ -1,0 +1,15 @@
+{
+  "name": "epson-restaurant",
+  "version": "0.1.0",
+  "description": "Print kit for restaurants and caf\u00e9s: menus, table tents, specials boards, allergen cards and kitchen prep labels, laid out for the paper in your Epson printer.",
+  "keywords": [
+    "epson",
+    "printing",
+    "restaurant",
+    "cafe",
+    "menu"
+  ],
+  "author": {
+    "name": "Epson Print MCP"
+  }
+}

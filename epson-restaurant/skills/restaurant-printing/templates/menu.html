@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="epson-paper" content="ps_a4 ps_letter">
+<meta name="epson-pages" content="1">
+<title>Menu</title>
+<!-- One-page dine-in menu. Replace the venue, sections and items; keep the structure.
+     Fits A4 and Letter. Up to ~6 sections / ~28 items; beyond that, drop descriptions or split into food + drinks menus. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=block">
+<style>
+  @page { margin: 14mm 15mm; }
+  :root { --ink: #1d1a17; --muted: #6b635a; --accent: #a4562a; --rule: #d9cfc4; }
+  body { font-family: Inter, Helvetica, Arial, sans-serif; color: var(--ink); font-size: 9.6pt; line-height: 1.38; }
+  header { text-align: center; padding-bottom: 5mm; border-bottom: 0.6pt solid var(--rule); margin-bottom: 6mm; }
+  .venue { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: 30pt; letter-spacing: 0.5pt; margin: 0; }
+  .tagline { color: var(--muted); font-size: 9.5pt; letter-spacing: 2.4pt; text-transform: uppercase; margin-top: 1.5mm; }
+  .columns { column-count: 2; column-gap: 11mm; }
+  section { break-inside: avoid; margin-bottom: 6mm; }
+  h2 { font-family: "Playfair Display", Georgia, serif; font-weight: 600; font-size: 14pt; color: var(--accent); margin: 0 0 2.5mm; }
+  h2 small { font-family: Inter, sans-serif; font-size: 8pt; color: var(--muted); font-weight: 400; margin-left: 2mm; }
+  .item { margin-bottom: 2.6mm; break-inside: avoid; }
+  .line { display: flex; align-items: baseline; gap: 2mm; font-weight: 600; }
+  .line .name { white-space: nowrap; }
+  .line .dots { flex: 1; border-bottom: 0.8pt dotted #b9aea2; transform: translateY(-1.2mm); }
+  .line .price { white-space: nowrap; }
+  .desc { color: var(--muted); font-size: 8.6pt; margin-top: 0.4mm; padding-right: 10mm; }
+  .tag { display: inline-block; font-size: 6.6pt; font-weight: 600; border: 0.6pt solid currentColor; border-radius: 2mm; padding: 0 1.2mm; margin-left: 1mm; color: #4d7a3a; vertical-align: 1pt; }
+  footer { position: fixed; bottom: 0; left: 0; right: 0; text-align: center; font-size: 7.6pt; color: var(--muted); border-top: 0.6pt solid var(--rule); padding-top: 2.5mm; }
+</style>
+</head>
+<body>
+<header>
+  <h1 class="venue">The Copper Kettle</h1>
+  <div class="tagline">All-day café &middot; Kitchen open 8am – 4pm</div>
+</header>
+
+<div class="columns">
+  <section>
+    <h2>Breakfast <small>until 11:30</small></h2>
+    <div class="item"><div class="line"><span class="name">Full Kettle Breakfast</span><span class="dots"></span><span class="price">£12.50</span></div>
+      <div class="desc">Two eggs any style, smoked bacon, pork sausage, roast tomato, mushrooms, beans, sourdough</div></div>
+    <div class="item"><div class="line"><span class="name">Shakshuka <span class="tag">V</span></span><span class="dots"></span><span class="price">£10.00</span></div>
+      <div class="desc">Baked eggs in spiced tomato and pepper sauce, feta, coriander, flatbread</div></div>
+    <div class="item"><div class="line"><span class="name">Avocado Toast <span class="tag">VG</span></span><span class="dots"></span><span class="price">£9.00</span></div>
+      <div class="desc">Smashed avocado, chilli, lime, toasted seeds on rye</div></div>
+    <div class="item"><div class="line"><span class="name">Buttermilk Pancakes <span class="tag">V</span></span><span class="dots"></span><span class="price">£8.50</span></div>
+      <div class="desc">Blueberries, whipped ricotta, maple syrup</div></div>
+  </section>
+
+  <section>
+    <h2>Lunch <small>from 11:30</small></h2>
+    <div class="item"><div class="line"><span class="name">Kettle Burger</span><span class="dots"></span><span class="price">£14.00</span></div>
+      <div class="desc">Aged beef patty, cheddar, pickles, house sauce, brioche bun, fries</div></div>
+    <div class="item"><div class="line"><span class="name">Roast Squash Salad <span class="tag">VG</span> <span class="tag">GF</span></span><span class="dots"></span><span class="price">£11.00</span></div>
+      <div class="desc">Mixed grains, pomegranate, toasted walnuts, tahini dressing</div></div>
+    <div class="item"><div class="line"><span class="name">Fish Finger Sandwich</span><span class="dots"></span><span class="price">£12.00</span></div>
+      <div class="desc">Panko haddock, tartare sauce, little gem, soft white bloomer</div></div>
+    <div class="item"><div class="line"><span class="name">Soup of the Day <span class="tag">V</span></span><span class="dots"></span><span class="price">£7.00</span></div>
+      <div class="desc">Ask your server &mdash; served with buttered sourdough</div></div>
+  </section>
+
+  <section>
+    <h2>Sides</h2>
+    <div class="item"><div class="line"><span class="name">Rosemary Fries <span class="tag">VG</span></span><span class="dots"></span><span class="price">£4.00</span></div></div>
+    <div class="item"><div class="line"><span class="name">Halloumi Fingers <span class="tag">V</span></span><span class="dots"></span><span class="price">£5.50</span></div></div>
+    <div class="item"><div class="line"><span class="name">Dressed Green Salad <span class="tag">VG</span> <span class="tag">GF</span></span><span class="dots"></span><span class="price">£4.00</span></div></div>
+  </section>
+
+  <section>
+    <h2>Sweet Things</h2>
+    <div class="item"><div class="line"><span class="name">Sticky Toffee Pudding <span class="tag">V</span></span><span class="dots"></span><span class="price">£7.00</span></div>
+      <div class="desc">Toffee sauce, vanilla ice cream</div></div>
+    <div class="item"><div class="line"><span class="name">Cake of the Day</span><span class="dots"></span><span class="price">£4.50</span></div>
+      <div class="desc">See the counter</div></div>
+  </section>
+
+  <section>
+    <h2>Coffee &amp; Tea</h2>
+    <div class="item"><div class="line"><span class="name">Espresso / Macchiato</span><span class="dots"></span><span class="price">£2.80</span></div></div>
+    <div class="item"><div class="line"><span class="name">Flat White / Cappuccino / Latte</span><span class="dots"></span><span class="price">£3.60</span></div></div>
+    <div class="item"><div class="line"><span class="name">Loose-leaf Tea</span><span class="dots"></span><span class="price">£3.00</span></div>
+      <div class="desc">English breakfast, Earl Grey, green, peppermint</div></div>
+    <div class="item"><div class="line"><span class="name">Hot Chocolate</span><span class="dots"></span><span class="price">£3.80</span></div></div>
+  </section>
+
+  <section>
+    <h2>Cold Drinks</h2>
+    <div class="item"><div class="line"><span class="name">Fresh Orange Juice</span><span class="dots"></span><span class="price">£3.50</span></div></div>
+    <div class="item"><div class="line"><span class="name">Homemade Lemonade</span><span class="dots"></span><span class="price">£3.20</span></div></div>
+    <div class="item"><div class="line"><span class="name">Iced Latte</span><span class="dots"></span><span class="price">£3.90</span></div></div>
+  </section>
+</div>
+
+<footer>V vegetarian &middot; VG vegan &middot; GF gluten-free &nbsp;|&nbsp; Please tell us about any allergies before ordering. A discretionary 10% service charge is added to tables of 6 or more.</footer>
+</body>
+</html>

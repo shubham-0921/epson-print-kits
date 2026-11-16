@@ -1,0 +1,19 @@
+{
+  "name": "epson-print",
+  "owner": { "name": "Epson Print MCP" },
+  "metadata": { "description": "Business print kits for Claude: ready-made layouts and paper know-how, printing straight to your Epson printer." },
+  "plugins": [
+    {
+      "name": "epson-restaurant",
+      "source": "./epson-restaurant",
+      "description": "Menus, table tents, specials boards, allergen cards and kitchen prep labels, printed on your Epson printer.",
+      "category": "productivity"
+    },
+    {
+      "name": "epson-school",
+      "source": "./epson-school",
+      "description": "Worksheets, certificates, attendance registers, name tags and flashcards, printed on your Epson printer.",
+      "category": "education"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="epson-paper" content="ps_a4 ps_letter">
+<meta name="epson-pages" content="1">
+<title>Today's specials</title>
+<!-- Wall or window poster for daily specials. 2–5 dishes. Replace the date, dishes and prices.
+     Deliberately light background: full-page dark fills use a lot of ink and make plain paper curl. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,600&family=Inter:wght@400;500;600&display=block">
+<style>
+  @page { margin: 10mm; }
+  :root { --ink: #1d1a17; --muted: #6b635a; --accent: #a4562a; --soft: #f6efe7; }
+  body { font-family: Inter, Helvetica, Arial, sans-serif; color: var(--ink); }
+  .sheet { height: 100vh; box-sizing: border-box; border: 2.2pt solid var(--ink); outline: 0.6pt solid var(--ink); outline-offset: -3.2mm; padding: 14mm 16mm; display: flex; flex-direction: column; }
+  .top { text-align: center; }
+  .kicker { font-size: 11pt; letter-spacing: 4pt; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+  h1 { font-family: "Playfair Display", Georgia, serif; font-weight: 800; font-size: 54pt; line-height: 1; margin: 3mm 0 2mm; }
+  .date { font-family: "Playfair Display", Georgia, serif; font-style: italic; font-weight: 600; font-size: 15pt; color: var(--muted); }
+  .dishes { flex: 1; display: flex; flex-direction: column; justify-content: space-evenly; margin: 6mm 0; }
+  .dish { display: grid; grid-template-columns: 1fr auto; column-gap: 8mm; align-items: baseline; padding: 4mm 0; border-bottom: 0.6pt solid #d9cfc4; }
+  .dish:last-child { border-bottom: 0; }
+  .dish .name { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: 22pt; }
+  .dish .price { font-size: 19pt; font-weight: 600; color: var(--accent); }
+  .dish .desc { grid-column: 1 / -1; color: var(--muted); font-size: 11.5pt; margin-top: 1.5mm; }
+  .bottom { text-align: center; background: var(--soft); border-radius: 3mm; padding: 4mm; font-size: 10.5pt; color: var(--muted); }
+  .bottom strong { color: var(--ink); }
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="top">
+    <div class="kicker">The Copper Kettle</div>
+    <h1>Today's Specials</h1>
+    <div class="date">Friday 15 November</div>
+  </div>
+  <div class="dishes">
+    <div class="dish"><span class="name">Wild Mushroom Risotto</span><span class="price">£13.50</span>
+      <span class="desc">Arborio rice, porcini, thyme, aged parmesan, truffle oil</span></div>
+    <div class="dish"><span class="name">Beer-Battered Cod</span><span class="price">£15.00</span>
+      <span class="desc">Triple-cooked chips, crushed minted peas, tartare sauce</span></div>
+    <div class="dish"><span class="name">Moroccan Lamb Tagine</span><span class="price">£16.00</span>
+      <span class="desc">Slow-cooked shoulder, apricots, almonds, herby couscous</span></div>
+    <div class="dish"><span class="name">Apple &amp; Blackberry Crumble</span><span class="price">£6.50</span>
+      <span class="desc">Oat crumble, warm vanilla custard</span></div>
+  </div>
+  <div class="bottom"><strong>Ask us about allergens</strong> &middot; Specials served while stocks last</div>
+</div>
+</body>
+</html>

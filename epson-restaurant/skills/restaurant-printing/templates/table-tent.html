@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="epson-paper" content="ps_a4 ps_letter">
+<meta name="epson-pages" content="1">
+<title>Table tent</title>
+<!-- Fold-in-half table tent. One sheet, folded along the dashed line, stands on the table showing the
+     same message on both sides. The top half is printed upside down so it reads correctly once folded.
+     Keep both .panel blocks identical (or put a different message on each side).
+     Halves use vh so the fold is centred on any paper size. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,600&family=Inter:wght@400;600&display=block">
+<style>
+  @page { margin: 8mm; }
+  :root { --ink: #1d1a17; --muted: #6b635a; --accent: #a4562a; }
+  body { font-family: Inter, Helvetica, Arial, sans-serif; color: var(--ink); }
+  .half { height: 50vh; box-sizing: border-box; display: flex; align-items: center; justify-content: center; padding: 10mm 14mm; }
+  .half.top { transform: rotate(180deg); border-bottom: 0.8pt dashed #b9aea2; }
+  .panel { text-align: center; width: 100%; }
+  .kicker { font-size: 10pt; letter-spacing: 3pt; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+  .headline { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: 38pt; line-height: 1.05; margin: 3mm 0 4mm; }
+  .detail { font-family: "Playfair Display", Georgia, serif; font-style: italic; font-weight: 600; font-size: 15pt; color: var(--muted); }
+  .price { display: inline-block; margin-top: 6mm; font-size: 16pt; font-weight: 600; border: 1.2pt solid var(--ink); border-radius: 30mm; padding: 1.5mm 7mm; }
+  .venue { margin-top: 7mm; font-size: 8.5pt; letter-spacing: 2pt; text-transform: uppercase; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="half top">
+  <div class="panel">
+    <div class="kicker">This week only</div>
+    <div class="headline">Pumpkin Spice<br>Latte</div>
+    <div class="detail">Espresso, steamed milk, house pumpkin syrup, cinnamon foam</div>
+    <div class="price">£4.20</div>
+    <div class="venue">The Copper Kettle</div>
+  </div>
+</div>
+<div class="half">
+  <div class="panel">
+    <div class="kicker">This week only</div>
+    <div class="headline">Pumpkin Spice<br>Latte</div>
+    <div class="detail">Espresso, steamed milk, house pumpkin syrup, cinnamon foam</div>
+    <div class="price">£4.20</div>
+    <div class="venue">The Copper Kettle</div>
+  </div>
+</div>
+</body>
+</html>

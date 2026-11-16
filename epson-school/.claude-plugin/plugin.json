@@ -1,0 +1,15 @@
+{
+  "name": "epson-school",
+  "version": "0.1.0",
+  "description": "Print kit for teachers and tutors: worksheets, certificates, attendance registers, name tags and flashcards, laid out for the paper in your Epson printer.",
+  "keywords": [
+    "epson",
+    "printing",
+    "school",
+    "teacher",
+    "worksheet"
+  ],
+  "author": {
+    "name": "Epson Print MCP"
+  }
+}
